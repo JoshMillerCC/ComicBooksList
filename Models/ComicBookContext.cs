@@ -13,6 +13,7 @@ namespace MVC_ComicBooksCharacters.Models
 {
     public class ComicBookContext : DbContext
     {
+        //a single comment
         public DbSet<ComicBook> ComicBooks { get; set; }
 
         public ComicBookContext(DbContextOptions<ComicBookContext> options) : base(options)
