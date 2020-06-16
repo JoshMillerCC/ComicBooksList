@@ -1,0 +1,14 @@
+﻿@model MVC_ComicBooksCharacters.Models.ComicBookContext
+
+@{
+}
+    <h1 class="text-center">Comic Books</h1>
+    <div class="container">
+        @foreach (MVC_ComicBooksCharacters.Models.ComicBook c in Model.ComicBooks)
+        {
+            <h2 class="text-center font-weight-bold">@c.ComicBookTitle</h2>
+            <img src=@Url.Content(c.ComicBookImage) alt="@c.ComicBookTitle" height="200" width="200" />
+            <p class="font-italic">Description: @c.ComicBookDescription</p>
+            <p class="font-italic">DatabaseID: @c.ComicBookID</p>
+        }
+    </div>
